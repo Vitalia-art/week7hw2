@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.root {
+    min-width: 320px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    overflow-x: hidden;
+}
+header {
+    display: grid;
+    place-items: center;
+    background-color: #e0e0e0;
+    padding: 10px 0;
+}
+h2 {
+    font-size: 2em;
+    padding: 10px;
+    text-align: center;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.main-content {
+    padding: 10px;
+    background-color: #fff8e3;
+    border-bottom: 10px solid #fff8e3;
+    text-align: center;
+}
+.grid-elements {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+.grid-element {
+    background-color: #feeab9;
+    padding: 10px;
+    text-align: center;
+    height: auto;
+    box-sizing: border-box;
+}
+.grid-element.wide {
+    grid-column: span 2;
+}
+.sidebar {
+    background-color: #ddeccb;
+    text-align: center;
+    height: auto;
+    padding: 10px;
+}
+footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #e0e0e0;
+    padding: 20px 0;
+    gap: 10px;
+    text-align: center;
+}
+.grid-footer {
+    background-color: #fafafa;
+    padding: 15px;
+    margin: 10px;
+}
+@media screen and (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .grid-elements {
+        grid-template-columns: 1fr 1fr;
+    }
+    footer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 768px) {
+    header h2 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+    .grid-elements {
+        margin-top:10px;
+    }
+    }
+    footer {
+        grid-template-columns: 1fr;
+    }
+    .main-content {
+        padding: 10px;
+        border: none;
+    }
+    .grid-elements {
+        grid-template-columns: 1fr 1fr;
+    }
+    .grid-element {
+        padding: 8px;
+        font-size: 1em;
+    }
+@media screen and (max-width: 480px) {
+    header h2 {
+        font-size: 1.2em;
+    }
+    h2 {
+        font-size: 1em;
+    }
+    }
+    footer {
+        grid-template-columns: 1fr;
+    }
+    .grid-elements {
+        grid-template-columns: 1fr 1fr;
+    }
+    .main-content {
+        padding: 5px;
+    }
